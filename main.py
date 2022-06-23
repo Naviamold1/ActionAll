@@ -44,8 +44,8 @@ async def msgall(ctx, *, args=None):
         for member in members:
             try:
                 await member.send(args)
-                print(f'✔️ Succesfully sent dm to {member}')
-                await ctx.send(f'✔️ Succesfully sent dm to {member}')
+                print(f'✔️ Successfully sent dm to {member}')
+                await ctx.send(f'✔️ Successfully sent dm to {member}')
             except:
                 await ctx.send(f'❌ Could Sent DM to {member}')
                 print(f'❌ Could Sent DM to {member}')
