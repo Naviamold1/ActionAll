@@ -8,7 +8,7 @@
 # Action All
 
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Action All</h3>
 
 <div align="center">
 
@@ -19,7 +19,7 @@
 
 
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Discord Bot That Can Message/Kick Everyone In Your Server.
     <br> 
 </p>
 
@@ -37,48 +37,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
-
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-
-## Getting Started <a name = "getting_started"></a>
-
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
-
-<h3 align="center">Project Title</h3>
-
-<div align="center">
-
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
-
-
-
-<p align="center"> Discord bot that can message/kick everyone in your server!
-    <br> 
-</p>
-
-## 📝 Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
-
-## 🧐 About <a name = "about"></a>
-
-Write about 1-2 paragraphs describing the purpose of your project.
+Ever wanted to message everyone or kick everyone for your Discord server for some reason? Well now you can!
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -90,104 +49,61 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them.
 
 ```
-Give examples
+Python - https://www.python.org
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+Download the project or if you have <a href=https://git-scm.com> Git </a> installed you can clone project by running this command.
 
 ```
-Give the example
+git clone https://github.com/Naviamold1/ActionAll.git
+
+cd ActionAll
 ```
 
-And repeat
+After downloading the project run this command to download necessary modules.
 
 ```
-until finished
+pip install -r requirements.txt
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
-
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+Rename the .env.template file to .env and put your Discord Bot Token there that you can get from https://discord.com/developers/applications
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+And finally run the app:
 
 ```
-Give an example
+python main.py
 ```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
-
-
-## Usage <a name = "usage"></a>
-
-Add notes about how to use the system.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
->>>>>>> main
+Do not use this project for any ill intent.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+You can use services like Heroku for free hosting. You can follow this <a href=https://www.youtube.com/watch?v=BPvg9bndP1U> Tutorial </a>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Python](https://www.python.org/) - Programming Language
+- [Discord.py](https://discordpy.readthedocs.io/en/stable/) - Python Module
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@Naviamold](https://github.com/Naviamold1) - Idea & Initial Work
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+
+See also the list of [contributors](https://github.com/Naviamold1/ActionAll/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- Kylelobo
+
 
 
 
