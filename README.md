@@ -70,6 +70,8 @@ After downloading the project run this command to download necessary modules.
 pip install -r requirements.txt
 ```
 
+Rename the .env.template file
+
 ```
 Rename the .env.template file to .env and put your Discord Bot Token there that you can get from https://discord.com/developers/applications
 ```
