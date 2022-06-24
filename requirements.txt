@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 discord.py==1.7.3
-=======
-discord.py==1.7.3
->>>>>>> ec7e635431df012b657ab7cd8cb6a81ec414df04
 python-dotenv==0.20.0
