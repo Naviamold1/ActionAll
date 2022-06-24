@@ -86,7 +86,7 @@ Do not use this project for any ill intent.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-You can use services like Heroku for free hosting. You can follow this <a href=https://www.youtube.com/watch?v=BPvg9bndP1U> Tutorial </a>
+You can use services like Heroku for free hosting. You can follow this https://www.youtube.com/watch?v=BPvg9bndP1U tutorial.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
