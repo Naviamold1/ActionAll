@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 import os
-from nextcord import Intents, Member
 from discord.ext.commands import *
 import discord
 from discord.ext import commands
