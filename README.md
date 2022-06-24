@@ -98,7 +98,7 @@ You can use services like Heroku for free hosting. You can follow this https://w
 ## 📝 TODO <a name = "todo"></a>
 - [x] Add Message All Function
 - [x] Add Kick All Function
-- [ ] Add Ban All Function
+- [X] Add Ban All Function
 - [ ] Add Ban/Kick/MSG All with specific role Function
 - [ ] Integrate Slash Commands
 - [ ] Make A Project Icon
