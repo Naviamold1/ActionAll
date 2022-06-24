@@ -1,4 +1,4 @@
-
+⚠️ WARNING THEIR IS A HIGH CHANCE THAT YOUR BOT MIGHT GET BANNED FOR USING **THE MESSAGE ALL COMMAND** DO THIS ON YOUR OWN RISK!
 <p align="center">
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
