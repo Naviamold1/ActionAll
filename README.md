@@ -3,7 +3,7 @@
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
-=======
+
 
 # Project Title
 
@@ -17,7 +17,7 @@
 
 </div>
 
----
+
 
 <p align="center"> Few lines describing your project.
     <br> 
@@ -41,9 +41,9 @@ Write about 1-2 paragraphs describing the purpose of your project.
 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
-=======
+
 ## Getting Started <a name = "getting_started"></a>
-=======
+
 <p align="center">
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
@@ -58,7 +58,7 @@ Write about 1-2 paragraphs describing the purpose of your project.
 
 </div>
 
----
+
 
 <p align="center"> Discord bot that can message/kick everyone in your server!
     <br> 
@@ -135,12 +135,12 @@ Give an example
 ## 🎈 Usage <a name="usage"></a>
 
 Add notes about how to use the system.
-=======
+
 
 ## Usage <a name = "usage"></a>
 
 Add notes about how to use the system.
-=======
+
 ## 🔧 Running the tests <a name = "tests"></a>
 
 Explain how to run the automated tests for this system.
@@ -189,5 +189,5 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - Inspiration
 - References
 
-=======
+
 
