@@ -15,7 +15,7 @@
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![Issues](https://img.shields.io/github/issues/Naviamold1/ActionAll)]()
 [![Forks](https://img.shields.io/github/forks/Naviamold1/ActionAll)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)]
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
   
 </div>
 
