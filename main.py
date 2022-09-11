@@ -53,15 +53,17 @@ async def banall(ctx, *, reason=None, days=int):
 async def msgall(ctx, *, args=None):
     if ctx.message.author.top_role.permissions.administrator:
         if args != None:
+            num = 0
             members = ctx.guild.members
             for member in members:
+                num += 1
                 try:
-                    if member > 45:
+                    if num > 45:
                         await ctx.send(f'Looks like your server has more than 45 members sorry I have to slow down to not hit the rate limit')
                         time.sleep(30)
                         await member.send(args)
                         await ctx.send(f'✔️ Successfully sent dm to {member} with 30 second delay')
-                    elif member < 45:
+                    elif num < 45:
                         await member.send(args)
                         print(f'✔️ Successfully sent dm to {member}')
                         await ctx.send(f'✔️ Successfully sent dm to {member}')
