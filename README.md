@@ -1,4 +1,4 @@
-⚠️ WARNING, THERE IS A HIGH CHANCE THAT YOUR BOT MIGHT GET BANNED FOR USING THESE COMMANDS. DO THIS AT YOUR OWN RISK! ⚠️
+⚠️ WARNING, THERE IS A HIGH CHANCE THAT YOUR BOT MIGHT **GET BANNED** FOR USING THESE COMMANDS. DO THIS AT YOUR OWN RISK! ⚠️
 
 <p align="center">
   <a href="" rel="noopener">
@@ -24,14 +24,14 @@
 
 ## 📝 Table of Contents
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Deployment](#deployment)
-- [Built Using](#built_using)
-- [TODO](#TODO)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [About](#-about)
+- [Getting Started](#-getting-started)
+- [Usage](#-usage)
+- [Deployment](#-deployment)
+- [Built Using](#%EF%B8%8F-built-using)
+- [TODO](#-todo)
+- [Authors](#%EF%B8%8F-authors)
+- [Acknowledgments](#-acknowledgements)
 
 ## 🧐 About
 
@@ -39,7 +39,7 @@ Ever wanted to message everyone or kick everyone for your Discord server for som
 
 ## 🏁 Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#-deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -81,11 +81,14 @@ python main.py
 
 ## 🎈 Usage
 
-Do not use this project for any ill intent.
+Do not use this project for any malicious or harmful purposes.
 
 ## 🚀 Deployment
 
-You can use services like Heroku for free hosting. You can follow this <https://www.youtube.com/watch?v=BPvg9bndP1U> tutorial.
+~~You can use services like Heroku for free hosting. You can follow [this Tutorial](https://www.youtube.com/watch?v=BPvg9bndP1U).~~
+**Heroku is no longer offering free dynos (hosting).**
+
+You can also use a [VPS](https://www.pythondiscord.com/pages/guides/python-guides/vps-services/).
 
 ## ⛏️ Built Using
 
