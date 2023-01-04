@@ -26,7 +26,9 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(name='Naviamold!', type=discord.ActivityType.watching))
     print(f'We have logged in as {bot.user}')
     sync = await bot.tree.sync()
-    print(f"Synced {len(sync)} commands(s)")
+    print(f"Synced {len(sync)} commands(s):")
+    for item in sync:
+        print(item.name)
 
 
 @bot.tree.command(name="ping", description="Pong")
