@@ -27,8 +27,11 @@ async def on_ready():
     print(f'We have logged in as {bot.user}')
     sync = await bot.tree.sync()
     print(f"Synced {len(sync)} commands(s):")
-    for item in sync:
-        print(item.name)
+    for command in sync:
+        print(command.name)
+    print(f'\nBot is in {len(bot.guilds)} server(s):')
+    for server in bot.guilds:
+        print(server.name)
 
 
 @bot.tree.command(name="ping", description="Pong")
@@ -39,81 +42,91 @@ async def ping(interaction: discord.Interaction):
 
 @bot.tree.command(name="kick_all", description="Kicks Every Member")
 @app_commands.default_permissions(administrator=True)
-async def kickall(ctx, *, reason: str = None):
-    if ctx.message.author.top_role.permissions.administrator:
-        for member in ctx.guild.members:
-            try:
-                await member.kick(reason=reason)
-                print(f"✔️ Kicked {member.name}")
-                await ctx.send(f"✔️ Kicked {member.name}")
-            except:
-                print(f"❌ Could not kick {member}")
-                await ctx.send(f'❌ Could not Kick {member}')
-    else:
-        await ctx.send("Missing Permissions.")
+@app_commands.describe(bots='If True Bots will also be Kicked', reason="Kick Reason")
+async def kickall(interaction: discord.Interaction, reason: str = None, bots: bool = False):
+    await interaction.response.defer()
+    for member in interaction.guild.members:
+        if bots is False:
+            if member.bot:
+                continue
+        try:
+            await member.kick(reason=reason)
+            print(f"✔️ Kicked {member.name}")
+            await interaction.followup.send(f"✔️ Kicked {member.name}")
+        except:
+            print(f"❌ Could not kick {member}")
+            await interaction.followup.send(f'❌ Could not Kick {member}')
 
 
 @bot.tree.command(name="ban_all", description="Bans Every Member")
+@app_commands.describe(bots='If True Bots will also be Banned', reason="Ban Reason", delete_message_days="The number of Days worth of Messages to Delete from the user in the Server.")
 @app_commands.default_permissions(administrator=True)
-async def banall(ctx, *, reason: str = None):
-    if ctx.message.author.top_role.permissions.administrator:
-        for member in ctx.guild.members:
-            try:
-                await member.ban(reason=reason, delete_message_days=7)
-                await ctx.send(f'✔️ Banned {member.name}')
-            except:
-                await ctx.send(f'❌ Could not Ban {member.name}')
-    else:
-        await ctx.send("Missing Permissions.")
+async def banall(interaction: discord.Interaction, reason: str = None, delete_message_days: int = 0, bots: bool = False):
+    await interaction.response.defer()
+    for member in interaction.guild.members:
+        if bots is False:
+            if member.bot:
+                continue
+        try:
+            await member.ban(reason=reason, delete_message_days=delete_message_days)
+            await interaction.followup.send(f'✔️ Banned {member.name}')
+        except:
+            await interaction.followup.send(f'❌ Could not Ban {member.name}')
 
 
 @bot.tree.command(name="msg_all", description="Messages Every Member")
 @app_commands.default_permissions(administrator=True)
-async def msgall(ctx, *, message: str = None):
-    if ctx.message.author.top_role.permissions.administrator:
-        if message != None:
-            num = 0
-            members = ctx.guild.members
-            for member in members:
-                num += 1
-                try:
-                    if num > 45:
-                        await ctx.send(f'Looks like your server has more than 45 members sorry I have to slow down to not hit the rate limit')
-                        time.sleep(30)
-                        await member.send(message)
-                        await ctx.send(f'✔️ Successfully sent dm to {member} with 30 second delay')
-                    elif num < 45:
-                        await member.send(message)
-                        print(f'✔️ Successfully sent dm to {member}')
-                        await ctx.send(f'✔️ Successfully sent dm to {member}')
-                except:
-                    await ctx.send(f'❌ Could Sent DM to {member}')
-                    print(f'❌ Could Sent DM to {member}')
-    else:
-        await ctx.send("Missing Permissions")
+@app_commands.describe(message="Message you want to Send")
+async def msgall(interaction: discord.Interaction, message: str):
+    await interaction.response.defer()
+    if message != None:
+        num = 0
+        members = interaction.guild.members
+        for member in members:
+            if member.bot:
+                continue
+            num += 1
+            try:
+                if num > 45:
+                    await interaction.followup.send(f'Looks like your server has more than 45 members sorry I have to slow down to not hit the rate limit')
+                    time.sleep(30)
+                    await member.send(message)
+                    await interaction.followup.send(f'✔️ Successfully sent dm to {member} with 30 second delay')
+                elif num < 45:
+                    await member.send(message)
+                    print(f'✔️ Successfully sent dm to {member}')
+                    await interaction.followup.send(f'✔️ Successfully sent dm to {member}')
+            except:
+                await interaction.followup.send(f'❌ Could Sent DM to {member}')
+                print(f'❌ Could Sent DM to {member}')
 
 
 @bot.tree.command(name="reset_nicknames", description="Removes Every Members Nickname")
 @app_commands.default_permissions(administrator=True)
-async def reset_nicknames(ctx):
-    for member in ctx.guild.members:
+@app_commands.describe(bots='If True Bots nicknames will also be Reseted')
+async def reset_nicknames(interaction: discord.Interaction, bots: bool = False):
+    await interaction.response.defer()
+    for member in interaction.guild.members:
+        if bots is False:
+            if member.bot:
+                continue
         try:
             nick = member.nick
             await member.edit(nick=None)
             if nick != None:
-                await ctx.send(f" ✔ Reset nickname of {member.name} from {nick} to {member.name}")
+                await interaction.followup.send(f" ✔ Reset nickname of {member.name} from {nick} to {member.name}")
         except discord.Forbidden:
             # The bot doesn't have permission to change the nickname of this user
-            await ctx.send(f" ❌ Dont have permission to reset nickname of {member.name} from {nick} to {member.name}")
+            await interaction.followup.send(f" ❌ Dont have permission to reset nickname of {member.name} from {nick} to {member.name}")
             pass
-        finally:
-            await ctx.send('Finished')
 
 
 @bot.tree.error
-async def error(interaction: Interaction,
-                error: AppCommandError):
-    await interaction.response.send_message(error, ephemeral=True)
+async def error(interaction: Interaction, error: AppCommandError):
+    try:
+        await interaction.response.send_message(error, ephemeral=True)
+    except discord.errors.InteractionResponded:
+        await interaction.followup.send(error, ephemeral=True)
 
 
 bot.run(os.getenv('BOT_TOKEN'))
